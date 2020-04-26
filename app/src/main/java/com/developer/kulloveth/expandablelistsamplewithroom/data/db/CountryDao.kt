@@ -6,13 +6,14 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continents
+import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Countrys
 
 
 @Dao
-interface ContinentDao {
-    @Query("SELECT * from `continent-table` ORDER BY continent ASC")
-    fun getAlphabetizedWords(): LiveData<List<Continents>>
+interface CountryDao {
+    @Query("SELECT * from `county-table` ORDER BY country ASC")
+    fun getAlphabetizedWords(): LiveData<List<Countrys>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(continent: Continents)
+    suspend fun insert(country: Countrys)
 }
