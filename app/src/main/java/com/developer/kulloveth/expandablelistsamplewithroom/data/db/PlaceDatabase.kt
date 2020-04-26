@@ -9,7 +9,7 @@ import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continent
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Countrys
 import java.util.concurrent.Executors
 
-@Database(entities = arrayOf(Continents::class, Countrys::class), version = 1, exportSchema = false)
+@Database(entities = arrayOf(Continents::class), version = 1, exportSchema = false)
 public abstract class PlaceDatabase : RoomDatabase() {
 
     abstract fun continentDao(): ContinentDao
@@ -49,4 +49,4 @@ public abstract class PlaceDatabase : RoomDatabase() {
         }
     }
 
-    }
+}

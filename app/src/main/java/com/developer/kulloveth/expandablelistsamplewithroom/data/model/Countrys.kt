@@ -7,5 +7,4 @@ import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-@Entity(tableName = "county-table")
-data class Countrys(@PrimaryKey @ColumnInfo(name = "country") val countryName: String) : Parcelable
+data class Countrys( val countryName: String) : Parcelable

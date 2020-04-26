@@ -8,4 +8,5 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 @Entity(tableName = "continent-table")
-data class Continents(@PrimaryKey @ColumnInfo(name = "continent")val ContinentName: String) : Parcelable
+data class Continents(@PrimaryKey @ColumnInfo(name = "continent")val ContinentName: String,
+                      @ColumnInfo(name = "countrys")val countrys: List<Countrys>) : Parcelable
