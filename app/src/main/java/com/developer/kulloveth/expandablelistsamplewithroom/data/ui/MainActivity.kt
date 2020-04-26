@@ -1,7 +1,8 @@
-package com.developer.kulloveth.expandablelistsamplewithroom
+package com.developer.kulloveth.expandablelistsamplewithroom.data.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.developer.kulloveth.expandablelistsamplewithroom.R
 
 class MainActivity : AppCompatActivity() {
 

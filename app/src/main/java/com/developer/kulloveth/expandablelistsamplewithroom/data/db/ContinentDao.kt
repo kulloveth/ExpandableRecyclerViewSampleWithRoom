@@ -11,7 +11,7 @@ import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continent
 @Dao
 interface ContinentDao {
     @Query("SELECT * from `continent-table` ORDER BY continent ASC")
-    fun getAlphabetizedWords(): LiveData<List<Continents>>
+    fun getAllContinent(): LiveData<List<Continents>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insert(continent: Continents)
