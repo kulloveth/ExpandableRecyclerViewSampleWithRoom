@@ -14,5 +14,5 @@ interface ContinentDao {
     fun getAlphabetizedWords(): LiveData<List<Continents>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(continent: Continents)
+    fun insert(continent: Continents)
 }

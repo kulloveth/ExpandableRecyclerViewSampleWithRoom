@@ -15,5 +15,5 @@ interface CountryDao {
     fun getAlphabetizedWords(): LiveData<List<Countrys>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(country: Countrys)
+    fun insert(country: Countrys)
 }
