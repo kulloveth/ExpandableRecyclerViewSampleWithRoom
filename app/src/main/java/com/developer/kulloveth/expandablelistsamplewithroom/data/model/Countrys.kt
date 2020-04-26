@@ -1,4 +1,4 @@
-package com.developer.kulloveth.expandablelistsamplewithroom.model
+package com.developer.kulloveth.expandablelistsamplewithroom.data.model
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo
