@@ -5,6 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.developer.kulloveth.expandablelistsamplewithroom.data.DataGenerator
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continents
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Countrys
 import java.util.concurrent.Executors
@@ -37,8 +38,10 @@ public abstract class PlaceDatabase : RoomDatabase() {
 
                         Executors.newSingleThreadExecutor().execute {
                             INSTANCE?.let {
+                                for (continent: Continents in DataGenerator.getContinents()) {
+                                    it.continentDao().insert(continent)
+                                }
 
-                                // it.continentDao().insert()
                             }
                         }
 
