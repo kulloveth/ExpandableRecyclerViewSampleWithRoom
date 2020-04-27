@@ -28,40 +28,40 @@ class ContinentViewHolder(itemView: View) : GroupViewHolder(itemView) {
         continentName.text = continent.continentName
     }
 
-    override fun expand() {
-        animateExpand()
-    }
-
-    override fun collapse() {
-        animateCollapse()
-    }
-
-    private fun animateExpand() {
-        val rotate = RotateAnimation(
-            360f,
-            180f,
-            RELATIVE_TO_SELF,
-            0.5f,
-            RELATIVE_TO_SELF,
-            0.5f
-        )
-        rotate.duration = 300
-        rotate.fillAfter = true
-        arrow.animation = rotate
-    }
-
-    private fun animateCollapse() {
-        val rotate = RotateAnimation(
-            180f,
-            360f,
-            RELATIVE_TO_SELF,
-            0.5f,
-            RELATIVE_TO_SELF,
-            0.5f
-        )
-        rotate.duration = 300
-        rotate.fillAfter = true
-        arrow.animation = rotate
-    }
+//    override fun expand() {
+//        animateExpand()
+//    }
+//
+//    override fun collapse() {
+//        animateCollapse()
+//    }
+//
+//    private fun animateExpand() {
+//        val rotate = RotateAnimation(
+//            360f,
+//            180f,
+//            RELATIVE_TO_SELF,
+//            0.5f,
+//            RELATIVE_TO_SELF,
+//            0.5f
+//        )
+//        rotate.duration = 300
+//        rotate.fillAfter = true
+//        arrow.animation = rotate
+//    }
+//
+//    private fun animateCollapse() {
+//        val rotate = RotateAnimation(
+//            180f,
+//            360f,
+//            RELATIVE_TO_SELF,
+//            0.5f,
+//            RELATIVE_TO_SELF,
+//            0.5f
+//        )
+//        rotate.duration = 300
+//        rotate.fillAfter = true
+//        arrow.animation = rotate
+//    }
 
 }
