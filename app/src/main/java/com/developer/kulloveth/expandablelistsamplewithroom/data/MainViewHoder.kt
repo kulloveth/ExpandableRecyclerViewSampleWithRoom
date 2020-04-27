@@ -21,6 +21,6 @@ class ContinentViewHolder(itemView: View) : GroupViewHolder(itemView) {
     val continentName = itemView.findViewById<TextView>(R.id.continent)
 
     fun bind(continent: Continents) {
-        continentName.text = continent.ContinentName
+        continentName.text = continent.continentName
     }
 }

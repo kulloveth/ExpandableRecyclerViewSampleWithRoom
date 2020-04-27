@@ -11,7 +11,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.developer.kulloveth.expandablelistsamplewithroom"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -39,6 +39,8 @@ dependencies {
     implementation "androidx.room:room-runtime:$rootProject.roomVersion"
     kapt "androidx.room:room-compiler:$rootProject.roomVersion"
     androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+
+    implementation 'com.google.code.gson:gson:2.8.6'
 
 // Lifecycle components
     implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.archLifecycleVersion"

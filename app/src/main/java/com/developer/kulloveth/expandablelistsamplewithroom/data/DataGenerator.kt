@@ -1,104 +1,101 @@
 package com.developer.kulloveth.expandablelistsamplewithroom.data
 
+import com.developer.kulloveth.expandablelistsamplewithroom.data.model.ContinentEntity
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continents
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Countrys
+import java.sql.Array
 
 class DataGenerator {
 
     companion object {
-        fun getContinents(): List<Continents> {
+        fun getContinents(): List<ContinentEntity> {
             return listOf(
-                Continents("Europe", europeCountrys()),
-                Continents("Africa", africaCountrys()),
-                Continents("Asia", asiaCountrys()),
-                Continents("North America", northAmericaCountrys()),
-                Continents("South America", southAmericaCountrys()),
-                Continents("Antarctica", antarcticaCountrys()),
-                Continents("Oceania", oceaniaCountrys()),
-                Continents("Australia", austrailaCountrys())
+                ContinentEntity("Europe", europeCountrys()),
+                ContinentEntity("Africa", africaCountrys()),
+                ContinentEntity("Asia", asiaCountrys()),
+                ContinentEntity("North America", northAmericaCountrys()),
+                ContinentEntity("South America", southAmericaCountrys()),
+                ContinentEntity("Antarctica", antarcticaCountrys()),
+                ContinentEntity("Oceania", oceaniaCountrys())
             )
         }
 
-        fun europeCountrys(): List<Countrys> {
-            return listOf(
-                Countrys("Germany"),
-                Countrys("Italy"),
-                Countrys("France"),
-                Countrys("United Kingdom"),
-                Countrys("NertherLand")
+        fun europeCountrys(): ArrayList<Countrys> {
+            val coun = ArrayList<Countrys>()
+                coun.add(Countrys("Germany"))
+                coun.add(Countrys("Italy"))
+                coun.add(Countrys("France"))
+                coun.add(Countrys("United Kingdom"))
+                coun.add(Countrys("NertherLand"))
+            return coun
 
-            )
+
         }
 
-        fun africaCountrys(): List<Countrys> {
-            return listOf(
-                Countrys("South Africa"),
-                Countrys("Nigeria"),
-                Countrys("Kenya"),
-                Countrys("Ghana"),
-                Countrys("Ethiopia")
-
-            )
+        fun africaCountrys(): ArrayList<Countrys> {
+            val coun = ArrayList<Countrys>()
+            coun.add(Countrys("South Africa"))
+            coun.add(Countrys("Nigeria"))
+            coun.add(Countrys("Kenya"))
+            coun.add(Countrys("Ghana"))
+            coun.add(Countrys("Ethiopia"))
+            return coun
         }
 
-        fun asiaCountrys(): List<Countrys> {
-            return listOf(
-                Countrys("Japan"),
-                Countrys("India"),
-                Countrys("Indonesi"),
-                Countrys("China"),
-                Countrys("Thailand")
-
-            )
+        fun asiaCountrys(): ArrayList<Countrys> {
+            val coun = ArrayList<Countrys>()
+            coun.add(Countrys("Japan"))
+            coun.add(Countrys("India"))
+            coun.add(Countrys("Indonesi"))
+            coun.add(Countrys("China"))
+            coun.add(Countrys("Thailand"))
+            return coun
         }
 
-        fun northAmericaCountrys(): List<Countrys> {
-            return listOf(
-                Countrys("United States"),
-                Countrys("Mexico"),
-                Countrys("Cuba"),
-                Countrys("Green Land")
+        fun northAmericaCountrys(): ArrayList<Countrys> {
+            val coun = ArrayList<Countrys>()
 
-            )
+            coun.add(Countrys("United States"))
+            coun.add(Countrys("Mexico"))
+            coun.add(Countrys("Cuba"))
+            coun.add(Countrys("Green Land"))
+            return coun
+
+
         }
 
-        fun southAmericaCountrys(): List<Countrys> {
-            return listOf(
-                Countrys("Brazil"),
-                Countrys("Argentina"),
-                Countrys("Columbia"),
-                Countrys("Peru"),
-                Countrys("Chile")
+        fun southAmericaCountrys(): ArrayList<Countrys> {
+            val coun = ArrayList<Countrys>()
+            coun.add(Countrys("Brazil"))
+            coun.add(Countrys("Argentina"))
+            coun.add(Countrys("Columbia"))
+            coun.add(Countrys("Peru"))
+            coun.add(Countrys("Chile"))
 
-            )
+            return coun
+
+
         }
 
-        fun antarcticaCountrys(): List<Countrys> {
-            return listOf(
-                Countrys("Esperenza Base"),
-                Countrys("Villa az Estrellaz"),
-                Countrys("General Bernando O'Higging"),
-                Countrys("Bellgrano II base"),
-                Countrys("Carlini Base")
-
-            )
+        fun antarcticaCountrys(): ArrayList<Countrys> {
+            val coun = ArrayList<Countrys>()
+            coun.add(Countrys("Esperenza Base"))
+            coun.add(Countrys("Villa az Estrellaz"))
+            coun.add(Countrys("General Bernando O'Higging"))
+            coun.add(Countrys("Bellgrano II base"))
+            coun.add(Countrys("Carlini Base"))
+            return coun
         }
 
-        fun oceaniaCountrys(): List<Countrys> {
-            return listOf(
-                Countrys("Australia"),
-                Countrys("Newzeland"),
-                Countrys("Fiji"),
-                Countrys("Samao"),
-                Countrys("Federated States")
-
-            )
+        fun oceaniaCountrys(): ArrayList<Countrys> {
+            val coun = ArrayList<Countrys>()
+            coun.add(Countrys("Australia"))
+            coun.add(Countrys("Newzeland"))
+            coun.add(Countrys("Fiji"))
+            coun.add(Countrys("Samao"))
+            coun.add(Countrys("Federated States"))
+            return coun
         }
 
-        fun austrailaCountrys(): List<Countrys> {
-            return listOf(
-
-            )
-        }
     }
 }

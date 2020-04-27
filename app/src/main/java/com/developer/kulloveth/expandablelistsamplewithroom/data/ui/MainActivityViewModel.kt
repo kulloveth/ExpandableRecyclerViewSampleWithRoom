@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import com.developer.kulloveth.expandablelistsamplewithroom.data.db.PlaceDatabase
+import com.developer.kulloveth.expandablelistsamplewithroom.data.model.ContinentEntity
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continents
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Repository
 
@@ -11,7 +12,7 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
 
     private val repository: Repository
 
-    val continents: LiveData<List<Continents>>
+    val continents: LiveData<List<ContinentEntity>>
 
 
     init {

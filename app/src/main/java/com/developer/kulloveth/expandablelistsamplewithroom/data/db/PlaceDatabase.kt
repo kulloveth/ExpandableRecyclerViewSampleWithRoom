@@ -4,18 +4,21 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverter
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.developer.kulloveth.expandablelistsamplewithroom.data.DataGenerator
+import com.developer.kulloveth.expandablelistsamplewithroom.data.model.ContinentConverter
+import com.developer.kulloveth.expandablelistsamplewithroom.data.model.ContinentEntity
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continents
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Countrys
 import java.util.concurrent.Executors
 
-@Database(entities = arrayOf(Continents::class), version = 1, exportSchema = false)
+@Database(entities = arrayOf(ContinentEntity::class), version = 1, exportSchema = false)
+
 public abstract class PlaceDatabase : RoomDatabase() {
 
     abstract fun continentDao(): ContinentDao
-    abstract fun countryDao(): CountryDao
-    private var mContext: Context? = null
+
 
     companion object {
         @Volatile
@@ -38,8 +41,13 @@ public abstract class PlaceDatabase : RoomDatabase() {
 
                         Executors.newSingleThreadExecutor().execute {
                             INSTANCE?.let {
-                                for (continent: Continents in DataGenerator.getContinents()) {
-                                    it.continentDao().insert(continent)
+                                for (continent: ContinentEntity in DataGenerator.getContinents()) {
+                                    it.continentDao().insert(
+                                        ContinentEntity(
+                                            continent.continentName,
+                                            continent.countrys
+                                        )
+                                    )
                                 }
 
                             }
