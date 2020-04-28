@@ -7,4 +7,4 @@ import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Countrys( val countryName: String) : Parcelable
+data class Country(val countryName: String) : Parcelable

@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             // Log.d("countr", " $it")
             for (con: ContinentEntity in it) {
 
-                val continent = Continents(con.continentName, con.countrys)
+                val continent = Continents(con.continentName, con.countries)
                 continents.add(continent)
 
                 Log.d("countr", " $continents")

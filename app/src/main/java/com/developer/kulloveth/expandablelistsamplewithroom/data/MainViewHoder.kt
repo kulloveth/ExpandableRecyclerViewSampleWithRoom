@@ -1,13 +1,11 @@
 package com.developer.kulloveth.expandablelistsamplewithroom.data
 
 import android.view.View
-import android.view.animation.Animation.RELATIVE_TO_SELF
-import android.view.animation.RotateAnimation
 import android.widget.ImageView
 import android.widget.TextView
 import com.developer.kulloveth.expandablelistsamplewithroom.R
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continents
-import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Countrys
+import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Country
 import com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder
 import com.thoughtbot.expandablerecyclerview.viewholders.GroupViewHolder
 
@@ -15,8 +13,8 @@ import com.thoughtbot.expandablerecyclerview.viewholders.GroupViewHolder
 class CountryViewHolder(itemView: View) : ChildViewHolder(itemView) {
     val countryName = itemView.findViewById<TextView>(R.id.countryName)
 
-    fun bind(countrys: Countrys) {
-        countryName.text = countrys.countryName
+    fun bind(country: Country) {
+        countryName.text = country.countryName
     }
 }
 

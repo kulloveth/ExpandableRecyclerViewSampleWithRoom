@@ -4,13 +4,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverter
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.developer.kulloveth.expandablelistsamplewithroom.data.DataGenerator
-import com.developer.kulloveth.expandablelistsamplewithroom.data.model.ContinentConverter
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.ContinentEntity
-import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continents
-import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Countrys
 import java.util.concurrent.Executors
 
 @Database(entities = arrayOf(ContinentEntity::class), version = 1, exportSchema = false)
@@ -45,7 +41,7 @@ public abstract class PlaceDatabase : RoomDatabase() {
                                     it.continentDao().insert(
                                         ContinentEntity(
                                             continent.continentName,
-                                            continent.countrys
+                                            continent.countries
                                         )
                                     )
                                 }
