@@ -1,4 +1,4 @@
-package com.developer.kulloveth.expandablelistsamplewithroom.data.ui
+package com.developer.kulloveth.expandablelistsamplewithroom.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.developer.kulloveth.expandablelistsamplewithroom.R
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.ContinentEntity
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continents
+import com.developer.kulloveth.expandablelistsamplewithroom.data.ui.ContinentAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

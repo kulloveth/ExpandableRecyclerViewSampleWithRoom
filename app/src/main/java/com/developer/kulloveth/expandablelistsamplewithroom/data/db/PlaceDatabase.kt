@@ -11,11 +11,13 @@ import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continent
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.ContinentEntity
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continents
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Countrys
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 import java.util.concurrent.Executors
 
-@Database(entities = arrayOf(ContinentEntity::class), version = 1, exportSchema = false)
+@Database(entities = [ContinentEntity::class], version = 1, exportSchema = false)
 
-public abstract class PlaceDatabase : RoomDatabase() {
+ abstract class PlaceDatabase : RoomDatabase() {
 
     abstract fun continentDao(): ContinentDao
 
@@ -24,22 +26,22 @@ public abstract class PlaceDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: PlaceDatabase? = null
 
-        fun getDatabase(context: Context): PlaceDatabase {
+        fun getDatabase(context: Context, scope: CoroutineScope): PlaceDatabase {
 
             return INSTANCE ?: synchronized(this) {
-                INSTANCE ?: buildDatabase(context).also {
+                INSTANCE ?: buildDatabase(context, scope).also {
                     INSTANCE = it
                 }
             }
         }
 
-        private fun buildDatabase(context: Context): PlaceDatabase {
+        private fun buildDatabase(context: Context, scope: CoroutineScope): PlaceDatabase {
             return Room.databaseBuilder(context, PlaceDatabase::class.java, "place_db")
                 .addCallback(object : RoomDatabase.Callback() {
                     override fun onCreate(db: SupportSQLiteDatabase) {
                         super.onCreate(db)
 
-                        Executors.newSingleThreadExecutor().execute {
+                        scope.launch {
                             INSTANCE?.let {
                                 for (continent: ContinentEntity in DataGenerator.getContinents()) {
                                     it.continentDao().insert(
