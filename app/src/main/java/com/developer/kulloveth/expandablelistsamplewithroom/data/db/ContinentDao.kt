@@ -6,7 +6,6 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.ContinentEntity
-import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continents
 
 
 @Dao
@@ -15,5 +14,5 @@ interface ContinentDao {
     fun getAllContinent(): LiveData<List<ContinentEntity>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insert(continent: ContinentEntity)
+    suspend fun insert(continent: ContinentEntity)
 }

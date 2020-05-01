@@ -4,7 +4,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.developer.kulloveth.expandablelistsamplewithroom.R
-import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continents
+import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continent
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Country
 import com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder
 import com.thoughtbot.expandablerecyclerview.viewholders.GroupViewHolder
@@ -22,7 +22,7 @@ class ContinentViewHolder(itemView: View) : GroupViewHolder(itemView) {
     val continentName = itemView.findViewById<TextView>(R.id.continent)
     val arrow = itemView.findViewById<ImageView>(R.id.arrow)
 
-    fun bind(continent: Continents) {
+    fun bind(continent: Continent) {
         continentName.text = continent.continentName
     }
 

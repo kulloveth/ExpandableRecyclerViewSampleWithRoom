@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import com.developer.kulloveth.expandablelistsamplewithroom.R
 import com.developer.kulloveth.expandablelistsamplewithroom.data.ContinentViewHolder
 import com.developer.kulloveth.expandablelistsamplewithroom.data.CountryViewHolder
-import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continents
+import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continent
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Country
 import com.thoughtbot.expandablerecyclerview.ExpandableRecyclerViewAdapter
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup
@@ -43,7 +43,7 @@ class ContinentAdapter(groups: List<ExpandableGroup<*>>?) :
         flatPosition: Int,
         group: ExpandableGroup<*>?
     ) {
-        val continents: Continents = group as Continents
-        holder?.bind(continents)
+        val continent: Continent = group as Continent
+        holder?.bind(continent)
     }
 }

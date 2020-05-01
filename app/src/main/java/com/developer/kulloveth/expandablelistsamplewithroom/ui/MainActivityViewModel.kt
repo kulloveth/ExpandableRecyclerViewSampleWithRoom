@@ -1,11 +1,11 @@
-package com.developer.kulloveth.expandablelistsamplewithroom.data.ui
+package com.developer.kulloveth.expandablelistsamplewithroom.ui
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.developer.kulloveth.expandablelistsamplewithroom.data.db.PlaceDatabase
+import androidx.lifecycle.viewModelScope
+import com.developer.kulloveth.expandablelistsamplewithroom.data.db.ContinentDatabase
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.ContinentEntity
-import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continents
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Repository
 
 class MainActivityViewModel(application: Application) : AndroidViewModel(application) {
@@ -16,7 +16,7 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
 
 
     init {
-        val continentDao = PlaceDatabase.getDatabase(application).continentDao()
+        val continentDao = ContinentDatabase.getDatabase(application, viewModelScope).continentDao()
         repository = Repository(continentDao)
         continents = repository.allContinents
     }

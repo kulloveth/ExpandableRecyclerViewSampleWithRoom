@@ -7,35 +7,36 @@ import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.developer.kulloveth.expandablelistsamplewithroom.data.DataGenerator
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.ContinentEntity
-import java.util.concurrent.Executors
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 
-@Database(entities = arrayOf(ContinentEntity::class), version = 1, exportSchema = false)
+@Database(entities = [ContinentEntity::class], version = 1, exportSchema = false)
 
-public abstract class PlaceDatabase : RoomDatabase() {
+abstract class ContinentDatabase : RoomDatabase() {
 
     abstract fun continentDao(): ContinentDao
 
 
     companion object {
         @Volatile
-        private var INSTANCE: PlaceDatabase? = null
+        private var INSTANCE: ContinentDatabase? = null
 
-        fun getDatabase(context: Context): PlaceDatabase {
+        fun getDatabase(context: Context, scope: CoroutineScope): ContinentDatabase {
 
             return INSTANCE ?: synchronized(this) {
-                INSTANCE ?: buildDatabase(context).also {
+                INSTANCE ?: buildDatabase(context, scope).also {
                     INSTANCE = it
                 }
             }
         }
 
-        private fun buildDatabase(context: Context): PlaceDatabase {
-            return Room.databaseBuilder(context, PlaceDatabase::class.java, "place_db")
+        private fun buildDatabase(context: Context, scope: CoroutineScope): ContinentDatabase {
+            return Room.databaseBuilder(context, ContinentDatabase::class.java, "place_db")
                 .addCallback(object : RoomDatabase.Callback() {
                     override fun onCreate(db: SupportSQLiteDatabase) {
                         super.onCreate(db)
 
-                        Executors.newSingleThreadExecutor().execute {
+                        scope.launch {
                             INSTANCE?.let {
                                 for (continent: ContinentEntity in DataGenerator.getContinents()) {
                                     it.continentDao().insert(

@@ -19,80 +19,80 @@ class DataGenerator {
         }
 
         fun europeCountrys(): ArrayList<Country> {
-            val coun = ArrayList<Country>()
-                coun.add(Country("Germany"))
-                coun.add(Country("Italy"))
-                coun.add(Country("France"))
-                coun.add(Country("United Kingdom"))
-                coun.add(Country("NertherLand"))
-            return coun
+            val counntries = ArrayList<Country>()
+            counntries.add(Country("Germany"))
+            counntries.add(Country("Italy"))
+            counntries.add(Country("France"))
+            counntries.add(Country("United Kingdom"))
+            counntries.add(Country("NertherLand"))
+            return counntries
 
 
         }
 
         fun africaCountrys(): ArrayList<Country> {
-            val coun = ArrayList<Country>()
-            coun.add(Country("South Africa"))
-            coun.add(Country("Nigeria"))
-            coun.add(Country("Kenya"))
-            coun.add(Country("Ghana"))
-            coun.add(Country("Ethiopia"))
-            return coun
+            val counntries = ArrayList<Country>()
+            counntries.add(Country("South Africa"))
+            counntries.add(Country("Nigeria"))
+            counntries.add(Country("Kenya"))
+            counntries.add(Country("Ghana"))
+            counntries.add(Country("Ethiopia"))
+            return counntries
         }
 
         fun asiaCountrys(): ArrayList<Country> {
-            val coun = ArrayList<Country>()
-            coun.add(Country("Japan"))
-            coun.add(Country("India"))
-            coun.add(Country("Indonesi"))
-            coun.add(Country("China"))
-            coun.add(Country("Thailand"))
-            return coun
+            val counntries = ArrayList<Country>()
+            counntries.add(Country("Japan"))
+            counntries.add(Country("India"))
+            counntries.add(Country("Indonesi"))
+            counntries.add(Country("China"))
+            counntries.add(Country("Thailand"))
+            return counntries
         }
 
         fun northAmericaCountrys(): ArrayList<Country> {
-            val coun = ArrayList<Country>()
+            val counntries = ArrayList<Country>()
 
-            coun.add(Country("United States"))
-            coun.add(Country("Mexico"))
-            coun.add(Country("Cuba"))
-            coun.add(Country("Green Land"))
-            return coun
+            counntries.add(Country("United States"))
+            counntries.add(Country("Mexico"))
+            counntries.add(Country("Cuba"))
+            counntries.add(Country("Green Land"))
+            return counntries
 
 
         }
 
         fun southAmericaCountrys(): ArrayList<Country> {
-            val coun = ArrayList<Country>()
-            coun.add(Country("Brazil"))
-            coun.add(Country("Argentina"))
-            coun.add(Country("Columbia"))
-            coun.add(Country("Peru"))
-            coun.add(Country("Chile"))
+            val counntries = ArrayList<Country>()
+            counntries.add(Country("Brazil"))
+            counntries.add(Country("Argentina"))
+            counntries.add(Country("Columbia"))
+            counntries.add(Country("Peru"))
+            counntries.add(Country("Chile"))
 
-            return coun
+            return counntries
 
 
         }
 
         fun antarcticaCountrys(): ArrayList<Country> {
-            val coun = ArrayList<Country>()
-            coun.add(Country("Esperenza Base"))
-            coun.add(Country("Villa az Estrellaz"))
-            coun.add(Country("General Bernando O'Higging"))
-            coun.add(Country("Bellgrano II base"))
-            coun.add(Country("Carlini Base"))
-            return coun
+            val counntries = ArrayList<Country>()
+            counntries.add(Country("Esperenza Base"))
+            counntries.add(Country("Villa az Estrellaz"))
+            counntries.add(Country("General Bernando O'Higging"))
+            counntries.add(Country("Bellgrano II base"))
+            counntries.add(Country("Carlini Base"))
+            return counntries
         }
 
         fun oceaniaCountrys(): ArrayList<Country> {
-            val coun = ArrayList<Country>()
-            coun.add(Country("Australia"))
-            coun.add(Country("Newzeland"))
-            coun.add(Country("Fiji"))
-            coun.add(Country("Samao"))
-            coun.add(Country("Federated States"))
-            return coun
+            val counntries = ArrayList<Country>()
+            counntries.add(Country("Australia"))
+            counntries.add(Country("Newzeland"))
+            counntries.add(Country("Fiji"))
+            counntries.add(Country("Samao"))
+            counntries.add(Country("Federated States"))
+            return counntries
         }
 
     }
