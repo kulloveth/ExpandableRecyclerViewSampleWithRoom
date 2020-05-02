@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.continents.observe(this, Observer {
             // Log.d("countr", " $it")
-            for (con: ContinentEntity in it) {
+            for (continentEntity: ContinentEntity in it) {
 
-                val continent = Continent(con.continentName, con.countries)
+                val continent = Continent(continentEntity.continentName, continentEntity.countries)
                 continents.add(continent)
 
                 Log.d("countr", " $continents")
