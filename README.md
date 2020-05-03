@@ -1,5 +1,5 @@
 # ExpandableRecyclerViewSampleWithRoom
-A project showing the continents of the world with some of there countries to demonstrate Expadable RecyclerView with ROOM
+A project showing the continents of the world with some of there countries to demonstrate Expandable RecyclerView with ROOM
 
 <table>
 <tr>

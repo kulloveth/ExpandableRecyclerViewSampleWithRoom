@@ -41,6 +41,7 @@ dependencies {
     implementation "androidx.room:room-ktx:$rootProject.roomVersion"
     androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
 
+//Gson
     implementation 'com.google.code.gson:gson:2.8.6'
 
 // Lifecycle components
@@ -56,6 +57,7 @@ dependencies {
 // Material design
     implementation "com.google.android.material:material:$rootProject.materialVersion"
 
+//Expandable
     implementation 'com.thoughtbot:expandablerecyclerview:1.3'
     implementation 'com.thoughtbot:expandablecheckrecyclerview:1.4'
 

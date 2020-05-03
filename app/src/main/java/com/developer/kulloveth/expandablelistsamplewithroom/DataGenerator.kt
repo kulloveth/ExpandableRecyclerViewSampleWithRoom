@@ -1,9 +1,7 @@
 package com.developer.kulloveth.expandablelistsamplewithroom.data
 
 import com.developer.kulloveth.expandablelistsamplewithroom.data.model.ContinentEntity
-import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continents
-import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Countrys
-import java.sql.Array
+import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Country
 
 class DataGenerator {
 
@@ -20,75 +18,78 @@ class DataGenerator {
             )
         }
 
-        fun europeCountrys(): List<Countrys> {
+        fun europeCountrys(): List<Country> {
             return listOf(
-                Countrys("Germany"),
-                Countrys("Italy"),
-                Countrys("France"),
-                Countrys("United Kingdom"),
-                Countrys("NertherLand")
+                Country("Germany"),
+                Country("Italy"),
+                Country("France"),
+                Country("United Kingdom"),
+                Country("NertherLand")
+            )
+        }
+
+        fun africaCountrys(): List<Country> {
+            return listOf(
+                Country("South Africa"),
+                Country("Nigeria"),
+                Country("Kenya"),
+                Country("Ghana"),
+                Country("Ethiopia")
+            )
+
+        }
+
+        fun asiaCountrys(): List<Country> {
+            return listOf(
+                Country("Japan"),
+                Country("India"),
+                Country("Indonesi"),
+                Country("China"),
+                Country("Thailand")
+            )
+        }
+
+        fun northAmericaCountrys(): List<Country> {
+            return listOf(
+                Country("United States"),
+                Country("Mexico"),
+                Country("Cuba"),
+                Country("Green Land")
+            )
+        }
+
+
+        fun southAmericaCountrys(): List<Country> {
+            return listOf(
+                Country("Brazil"),
+                Country("Argentina"),
+                Country("Columbia"),
+                Country("Peru"),
+                Country("Chile")
+            )
+        }
+
+
+        fun antarcticaCountrys(): List<Country> {
+            return listOf(
+                Country("Esperenza Base"),
+                Country("Villa az Estrellaz"),
+                Country("General Bernando O'Higging"),
+                Country("Bellgrano II base"),
+                Country("Carlini Base")
+            )
+        }
+
+        fun oceaniaCountrys(): List<Country> {
+            return listOf(
+                Country("Australia"),
+                Country("Newzeland"),
+                Country("Fiji"),
+                Country("Samao"),
+                Country("Federated States")
             )
 
 
         }
-
-        fun africaCountrys(): List<Countrys> {
-            return listOf(
-                Countrys("South Africa"),
-                Countrys("Nigeria"),
-                Countrys("Kenya"),
-                Countrys("Ghana"),
-                Countrys("Ethiopia")
-            )
-
-        }
-
-        fun asiaCountrys(): List<Countrys> {
-            return listOf(
-                Countrys("Japan"),
-                Countrys("India"),
-                Countrys("Indonesi"),
-                Countrys("China"),
-                Countrys("Thailand")
-            )
-        }
-
-        fun northAmericaCountrys(): List<Countrys> {
-            return listOf(
-                Countrys("United States"),
-                Countrys("Mexico"),
-                Countrys("Cuba"),
-                Countrys("Green Land"))
-        }
-
-        fun southAmericaCountrys(): List<Countrys> {
-            return listOf(
-                Countrys("Brazil"),
-                Countrys("Argentina"),
-                Countrys("Columbia"),
-                Countrys("Peru"),
-                Countrys("Chile")
-            )
-        }
-
-        fun antarcticaCountrys(): List<Countrys> {
-            return listOf(
-                Countrys("Esperenza Base"),
-                Countrys("Villa az Estrellaz"),
-                Countrys("General Bernando O'Higging"),
-                Countrys("Bellgrano II base"),
-                Countrys("Carlini Base")
-            )
-        }
-
-        fun oceaniaCountrys(): List<Countrys> {
-            return listOf(
-                Countrys("Australia"),
-                Countrys("Newzeland"),
-                Countrys("Fiji"),
-                Countrys("Samao"),
-                Countrys("Federated States"))
-        }
-
     }
 }

@@ -2,12 +2,11 @@ package com.developer.kulloveth.expandablelistsamplewithroom.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ExpandableListAdapter
 import com.developer.kulloveth.expandablelistsamplewithroom.R
 import com.developer.kulloveth.expandablelistsamplewithroom.data.ContinentViewHolder
 import com.developer.kulloveth.expandablelistsamplewithroom.data.CountryViewHolder
-import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continents
-import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Countrys
+import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Continent
+import com.developer.kulloveth.expandablelistsamplewithroom.data.model.Country
 import com.thoughtbot.expandablerecyclerview.ExpandableRecyclerViewAdapter
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup
 
@@ -35,8 +34,8 @@ class ContinentAdapter(groups: List<ExpandableGroup<*>>?) :
         group: ExpandableGroup<*>?,
         childIndex: Int
     ) {
-        val countrys: Countrys = group?.items?.get(childIndex) as Countrys
-        holder?.bind(countrys)
+        val country: Country = group?.items?.get(childIndex) as Country
+        holder?.bind(country)
     }
 
     override fun onBindGroupViewHolder(
@@ -44,7 +43,7 @@ class ContinentAdapter(groups: List<ExpandableGroup<*>>?) :
         flatPosition: Int,
         group: ExpandableGroup<*>?
     ) {
-        val continents: Continents = group as Continents
-        holder?.bind(continents)
+        val continent: Continent = group as Continent
+        holder?.bind(continent)
     }
 }
