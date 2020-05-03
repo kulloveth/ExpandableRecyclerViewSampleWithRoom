@@ -1,4 +1,4 @@
-package com.developer.kulloveth.expandablelistsamplewithroom.data.ui
+package com.developer.kulloveth.expandablelistsamplewithroom.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

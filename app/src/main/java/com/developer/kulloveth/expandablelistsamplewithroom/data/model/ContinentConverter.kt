@@ -13,14 +13,14 @@ class ContinentConverter {
     companion object {
         var gson: Gson = Gson()
         @TypeConverter @JvmStatic
-        fun stringToSomeObjectList(data: String?): ArrayList<Countrys> {
+        fun stringToSomeObjectList(data: String?): List<Countrys> {
             val listType: Type =
-                object : TypeToken<ArrayList<Countrys?>?>() {}.getType()
+                object : TypeToken<List<Countrys?>?>() {}.getType()
             return gson.fromJson(data, listType)
         }
 
         @TypeConverter @JvmStatic
-        fun someObjectListToString(someObjects: ArrayList<Countrys?>?): String {
+        fun someObjectListToString(someObjects: List<Countrys?>?): String {
             return gson.toJson(someObjects)
         }
     }

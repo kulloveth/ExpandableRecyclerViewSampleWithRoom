@@ -20,81 +20,74 @@ class DataGenerator {
             )
         }
 
-        fun europeCountrys(): ArrayList<Countrys> {
-            val coun = ArrayList<Countrys>()
-                coun.add(Countrys("Germany"))
-                coun.add(Countrys("Italy"))
-                coun.add(Countrys("France"))
-                coun.add(Countrys("United Kingdom"))
-                coun.add(Countrys("NertherLand"))
-            return coun
+        fun europeCountrys(): List<Countrys> {
+            return listOf(
+                Countrys("Germany"),
+                Countrys("Italy"),
+                Countrys("France"),
+                Countrys("United Kingdom"),
+                Countrys("NertherLand")
+            )
 
 
         }
 
-        fun africaCountrys(): ArrayList<Countrys> {
-            val coun = ArrayList<Countrys>()
-            coun.add(Countrys("South Africa"))
-            coun.add(Countrys("Nigeria"))
-            coun.add(Countrys("Kenya"))
-            coun.add(Countrys("Ghana"))
-            coun.add(Countrys("Ethiopia"))
-            return coun
-        }
-
-        fun asiaCountrys(): ArrayList<Countrys> {
-            val coun = ArrayList<Countrys>()
-            coun.add(Countrys("Japan"))
-            coun.add(Countrys("India"))
-            coun.add(Countrys("Indonesi"))
-            coun.add(Countrys("China"))
-            coun.add(Countrys("Thailand"))
-            return coun
-        }
-
-        fun northAmericaCountrys(): ArrayList<Countrys> {
-            val coun = ArrayList<Countrys>()
-
-            coun.add(Countrys("United States"))
-            coun.add(Countrys("Mexico"))
-            coun.add(Countrys("Cuba"))
-            coun.add(Countrys("Green Land"))
-            return coun
-
+        fun africaCountrys(): List<Countrys> {
+            return listOf(
+                Countrys("South Africa"),
+                Countrys("Nigeria"),
+                Countrys("Kenya"),
+                Countrys("Ghana"),
+                Countrys("Ethiopia")
+            )
 
         }
 
-        fun southAmericaCountrys(): ArrayList<Countrys> {
-            val coun = ArrayList<Countrys>()
-            coun.add(Countrys("Brazil"))
-            coun.add(Countrys("Argentina"))
-            coun.add(Countrys("Columbia"))
-            coun.add(Countrys("Peru"))
-            coun.add(Countrys("Chile"))
-
-            return coun
-
-
+        fun asiaCountrys(): List<Countrys> {
+            return listOf(
+                Countrys("Japan"),
+                Countrys("India"),
+                Countrys("Indonesi"),
+                Countrys("China"),
+                Countrys("Thailand")
+            )
         }
 
-        fun antarcticaCountrys(): ArrayList<Countrys> {
-            val coun = ArrayList<Countrys>()
-            coun.add(Countrys("Esperenza Base"))
-            coun.add(Countrys("Villa az Estrellaz"))
-            coun.add(Countrys("General Bernando O'Higging"))
-            coun.add(Countrys("Bellgrano II base"))
-            coun.add(Countrys("Carlini Base"))
-            return coun
+        fun northAmericaCountrys(): List<Countrys> {
+            return listOf(
+                Countrys("United States"),
+                Countrys("Mexico"),
+                Countrys("Cuba"),
+                Countrys("Green Land"))
         }
 
-        fun oceaniaCountrys(): ArrayList<Countrys> {
-            val coun = ArrayList<Countrys>()
-            coun.add(Countrys("Australia"))
-            coun.add(Countrys("Newzeland"))
-            coun.add(Countrys("Fiji"))
-            coun.add(Countrys("Samao"))
-            coun.add(Countrys("Federated States"))
-            return coun
+        fun southAmericaCountrys(): List<Countrys> {
+            return listOf(
+                Countrys("Brazil"),
+                Countrys("Argentina"),
+                Countrys("Columbia"),
+                Countrys("Peru"),
+                Countrys("Chile")
+            )
+        }
+
+        fun antarcticaCountrys(): List<Countrys> {
+            return listOf(
+                Countrys("Esperenza Base"),
+                Countrys("Villa az Estrellaz"),
+                Countrys("General Bernando O'Higging"),
+                Countrys("Bellgrano II base"),
+                Countrys("Carlini Base")
+            )
+        }
+
+        fun oceaniaCountrys(): List<Countrys> {
+            return listOf(
+                Countrys("Australia"),
+                Countrys("Newzeland"),
+                Countrys("Fiji"),
+                Countrys("Samao"),
+                Countrys("Federated States"))
         }
 
     }
